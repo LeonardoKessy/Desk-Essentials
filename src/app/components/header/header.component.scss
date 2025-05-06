@@ -1,0 +1,16 @@
+:host {
+    width: 100%;
+    min-height: 3rem;
+    padding: .5rem .7rem;
+    background-color: #48637d;
+    font-family: 'Montserrat', Helvetica, sans-serif;
+    border-bottom: 1px solid #434461;
+
+    h1 {
+        font-size: 2rem;
+        
+        img {
+            height: 3rem;
+        }
+    }
+}

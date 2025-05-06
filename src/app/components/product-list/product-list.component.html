@@ -1,0 +1,7 @@
+<div class="cont">
+    @for (product of products; track $index) {
+        <div class="card">
+            <img [src]="product.image" [alt]="product.name">
+        </div>
+    }
+</div>
