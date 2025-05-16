@@ -3,10 +3,11 @@ import { BrowserModule, provideClientHydration, withEventReplay } from '@angular
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ProductListComponent } from './components/product-list/product-list.component';
-import { CartSidebarComponent } from './components/cart-sidebar/cart-sidebar.component';
+import { ProductListComponent } from './components/catalog/product-list/product-list.component';
+import { CartSidebarComponent } from './components/catalog/cart-sidebar/cart-sidebar.component';
 import { HeaderComponent } from './components/header/header.component';
 import { CatalogComponent } from './components/catalog/catalog.component';
+import { AboutComponent } from './components/about/about.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { CatalogComponent } from './components/catalog/catalog.component';
     CartSidebarComponent,
     HeaderComponent,
     CatalogComponent,
+    AboutComponent,
   ],
   imports: [
     BrowserModule,

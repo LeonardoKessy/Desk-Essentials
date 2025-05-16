@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Product } from '../../interfaces/product';
+import { Product } from '../../../interfaces/product';
 
 @Component({
   selector: 'app-product-list',
@@ -7,6 +7,7 @@ import { Product } from '../../interfaces/product';
   templateUrl: './product-list.component.html',
   styleUrl: './product-list.component.scss'
 })
+
 export class ProductListComponent {
   products: Product[] = [
     {
@@ -14,7 +15,7 @@ export class ProductListComponent {
       price: 2000,
       image: 'assets/img/products/postIts.jpg',
       type: 'Stationary',
-      stock: 200,
+      stock: 0,
     },
     {
       name: 'Stapler',
@@ -22,6 +23,17 @@ export class ProductListComponent {
       image: 'assets/img/products/stapler.jpg',
       type: 'Stationary',
       stock: 30,
-    }
-  ]
+    },
+    {
+      name: 'Paperclip pack',
+      price: 1200,
+      image: 'assets/img/products/stapler.jpg',
+      type: 'Stationary',
+      stock: 150,
+    },
+  ];
+
+  addToCart(product: Product): void {
+    alert(product);
+  }
 }
