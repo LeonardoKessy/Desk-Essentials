@@ -1,7 +1,14 @@
 @if ((this.cart$ | async)?.length) {
     <ul>
     @for (item of this.cart$ | async; track $index) {
-        <li>{{ item.product.name }} - {{ item.amount }}</li>
+        <li>
+            <span>{{ item.product.name }}</span>
+            <div>
+                <button (click)="changeAmount(item.product.name, false)">-</button>
+                <input type="number" min="1" [max]="item.product.stock" (input)="setAmount($event, item.product.name)" [value]="item.amount">
+                <button (click)="changeAmount(item.product.name, true)">+</button>
+            </div>
+        </li>
     } 
     </ul>
 } @else {

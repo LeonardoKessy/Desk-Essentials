@@ -15,4 +15,14 @@ export class CartSidebarComponent {
   constructor (private CartService : ProductCartService) {
     this.cart$ = CartService.cart.asObservable();
   }
+  
+  setAmount(e : Event , name : String) {
+    let amount : number | typeof NaN = parseInt((e.target as HTMLInputElement).value);
+
+    if (amount) this.CartService.setAmount(name, amount);
+  }
+
+  changeAmount(name : string, b : Boolean) {
+    this.CartService.changeAmount(name, b);
+  }
 }
