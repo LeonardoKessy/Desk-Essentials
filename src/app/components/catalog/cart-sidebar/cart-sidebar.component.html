@@ -1,0 +1,9 @@
+@if ((this.cart$ | async)?.length) {
+    <ul>
+    @for (item of this.cart$ | async; track $index) {
+        <li>{{ item.product.name }} - {{ item.amount }}</li>
+    } 
+    </ul>
+} @else {
+    <p>Add things here...</p>
+}

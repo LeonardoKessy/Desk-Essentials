@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, output } from '@angular/core';
 import { Product } from '../../../interfaces/product';
 
 @Component({
@@ -32,8 +32,4 @@ export class ProductListComponent {
       stock: 150,
     },
   ];
-
-  addToCart(product: Product): void {
-    alert(product);
-  }
 }

@@ -8,6 +8,7 @@ import { CartSidebarComponent } from './components/catalog/cart-sidebar/cart-sid
 import { HeaderComponent } from './components/header/header.component';
 import { CatalogComponent } from './components/catalog/catalog.component';
 import { AboutComponent } from './components/about/about.component';
+import { ProductCardComponent } from './components/catalog/product-list/product-card/product-card.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { AboutComponent } from './components/about/about.component';
     HeaderComponent,
     CatalogComponent,
     AboutComponent,
+    ProductCardComponent,
   ],
   imports: [
     BrowserModule,

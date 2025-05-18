@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Product } from '../../interfaces/product';
 
 @Component({
   selector: 'app-catalog',
@@ -6,6 +7,6 @@ import { Component } from '@angular/core';
   templateUrl: './catalog.component.html',
   styleUrl: './catalog.component.scss'
 })
-export class CatalogComponent {
+export class CatalogComponent { 
 
 }

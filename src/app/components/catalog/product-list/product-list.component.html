@@ -1,24 +1,6 @@
 <div class="cont">
     @for (product of products; track $index) {
-        <div class="card">
-            <div class="info-cont">
-                <img [src]="product.image" [alt]="product.name">
-                <div>
-                    <h4>{{ product.name }}</h4>
-                    <p class="price">{{ product.price | currency }}</p>
-                    <p class="type">{{ product.type }}</p>
-                </div>
-                @if (product.stock <= 0) {
-                <div>
-                    <p class="stock">No stock</p>
-                </div>
-                } @else {
-                <div>
-                    <button class="add" (click)="addToCart(product)" >Add to cart</button>
-                </div>
-                }
-            </div>
-        </div>
+        <app-product-card [product]="product" />
     } @empty {
         <div class="empty-cont">
             <p>
