@@ -49,10 +49,19 @@
                     background-color: #48637e;
                     cursor: pointer;
                     background: #88afd3;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    line-height: 100%;
 
                     &:hover {
                         background-color: #699dce;
                     }
+                }
+
+                #remove {
+                    margin-left: 1rem;
+                    background-color: #c23f5f;
                 }
             }
         }

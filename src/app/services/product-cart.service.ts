@@ -50,8 +50,23 @@ export class ProductCartService {
     if (b) {
       if (found.amount < found.product.stock) found.amount++;
     } else {
-      if (found.amount > 1) found.amount--;
+      if (found.amount > 1) 
+        found.amount--;
+      else {
+        this.removeItem(name);
+        return;
+      }
     }
+    this.cart.next(this._cart);
+  }
+
+  removeItem(name: string) {
+    let found = this._findItem(name);
+
+    if (!found) return;
+
+    this._cart.splice(this._cart.indexOf(found), 1);
+
     this.cart.next(this._cart);
   }
 

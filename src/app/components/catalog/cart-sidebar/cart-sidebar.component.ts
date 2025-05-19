@@ -25,4 +25,8 @@ export class CartSidebarComponent {
   changeAmount(name : string, b : Boolean) {
     this.CartService.changeAmount(name, b);
   }
+
+  deleteItem(name : string) {
+    this.CartService.removeItem(name);
+  }
 }
